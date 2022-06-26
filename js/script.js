@@ -6,7 +6,7 @@ import Tooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
-import initFetchAnimais from "./modules/fetch-animais.js";
+import fetchAnimais from "./modules/fetch-animais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 import initAnimacaoScroll from "./modules/scroll-animate.js";
 
@@ -38,10 +38,12 @@ modal.init();
 const toolTip = new Tooltip("[data-tooltip]");
 toolTip.init();
 
+// url para online ou interna
+fetchAnimais("../../animaisapi.json", ".numeros-grid");
+
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetchAnimais();
 initFetchBitcoin();
 initAnimacaoScroll();
 
