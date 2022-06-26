@@ -3,11 +3,11 @@ import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tab-nav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
+import fetchAnimais from "./modules/fetch-animais.js";
+import fetchBitcoin from "./modules/fetch-bitcoin.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
-import fetchAnimais from "./modules/fetch-animais.js";
-import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 import initAnimacaoScroll from "./modules/scroll-animate.js";
 
 // --------------------------------------------
@@ -41,10 +41,12 @@ toolTip.init();
 // url para online ou interna
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
 
+// url expecifica par obter taxa de bitcoin do site
+fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
+
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetchBitcoin();
 initAnimacaoScroll();
 
 // import $ from "jquery";
