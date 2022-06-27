@@ -38,12 +38,6 @@ modal.init();
 const toolTip = new Tooltip("[data-tooltip]");
 toolTip.init();
 
-// url para online ou interna
-fetchAnimais("../../animaisapi.json", ".numeros-grid");
-
-// url expecifica par obter taxa de bitcoin do site
-fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
-
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
@@ -55,6 +49,12 @@ menuMobile.init();
 
 const funcionamento = new Funcionamento("[data-semana]", "aberto");
 funcionamento.init();
+
+// url para online ou interna
+fetchAnimais("./animaisapi.json", ".numeros-grid");
+
+// url expecifica par obter taxa de bitcoin do site
+fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 
 // import $ from "jquery";
 // import _ from "lodash";
