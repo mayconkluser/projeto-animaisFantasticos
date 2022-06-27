@@ -7,7 +7,7 @@ import fetchAnimais from "./modules/fetch-animais.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
 import ScrollAnima from "./modules/scroll-anima.js";
 import DropDownMenu from "./modules/dropdown-menu.js";
-import initMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 
 // --------------------------------------------
@@ -50,7 +50,9 @@ scrollAnima.init();
 const dropdownMenu = new DropDownMenu("[data-dropdown]");
 dropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initFuncionamento();
 
 // import $ from "jquery";
