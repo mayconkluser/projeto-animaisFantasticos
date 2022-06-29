@@ -9,7 +9,7 @@ export default class MenuMobile {
     // define click como argumento padrão de eventos caso o usuario não defina
     if (events === undefined) {
       //"touchstart", serve para click em dispositivos moveis
-      this.events = ["click"];
+      this.events = ["touchstart", "click"];
     } else {
       this.events = events;
     }
@@ -17,7 +17,8 @@ export default class MenuMobile {
     this.openMenu = this.openMenu.bind(this);
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.classActive);
     this.menuButton.classList.add(this.classActive);
     outsideClick(this.menuList, this.events, () => {

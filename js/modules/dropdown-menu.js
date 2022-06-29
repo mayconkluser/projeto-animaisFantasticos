@@ -6,7 +6,7 @@ export default class DropDownMenu {
 
     // define click como argumento padrao de events caso o usuario n defina
     if (events === undefined) {
-      this.events = ["click"];
+      this.events = ["touchstart", "click"];
     } else {
       this.events = events;
     }
