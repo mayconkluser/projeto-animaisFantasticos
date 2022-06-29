@@ -9,6 +9,7 @@ import ScrollAnima from "./modules/scroll-anima.js";
 import DropDownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js";
 import Funcionamento from "./modules/funcionamento.js";
+import SlideNav from "./modules/slide.js";
 
 // --------------------------------------------
 import * as test from "./modules/teste.js";
@@ -61,3 +62,7 @@ fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 
 // $("nav").hide();
 // const diferenca = _.difference(["banana", "uva"], ["banana", "morango"]);
+
+const slide = new SlideNav(".slide", ".slide-wrapper");
+slide.init();
+slide.addControl(".custom-control");
